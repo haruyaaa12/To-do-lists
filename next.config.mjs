@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
-export default nextConfig;
+export default {
+  images: {
+    domains: ['i.imgur.com'],
+  },
+};

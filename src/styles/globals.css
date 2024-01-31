@@ -1,33 +1,73 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.todo-heading-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.todo-heading {
+  font-size: 30px;
+  margin: 0;
+}
+
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.add-task button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.task-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.task-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.task-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
 }
